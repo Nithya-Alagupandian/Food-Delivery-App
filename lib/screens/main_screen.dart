@@ -42,8 +42,8 @@ class _MainScreenState extends State<MainScreen> {
     }
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: const PreferredSize(
-          preferredSize: Size.fromHeight(50), child: AppBarUI()),
+      /* appBar: const PreferredSize(
+          preferredSize: Size.fromHeight(50), child: AppBarUI()), */
       body: SizedBox.expand(child: child),
       bottomNavigationBar: bottomNavBar(),
     );
@@ -54,8 +54,8 @@ class _MainScreenState extends State<MainScreen> {
       currentIndex: _selectedIndex,
       showSelectedLabels: true,
       showUnselectedLabels: true,
-      selectedItemColor: Colors.blue,
-      unselectedItemColor: Colors.pink,
+      selectedItemColor: Colors.black,
+      unselectedItemColor: Colors.grey,
       items: const [
         BottomNavigationBarItem(
           icon: Icon(Icons.location_on_outlined),

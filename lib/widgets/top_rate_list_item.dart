@@ -29,7 +29,7 @@ class TopRateItemView extends State<TopRateItemStateFul> {
 
           url = isFavt ? 'assets/red_favt.png' : 'assets/favt.png';
 
-          print('IsFavt : $isFavt :  $url');
+          // print('IsFavt : $isFavt :  $url');
         });
       },
       child: Container(

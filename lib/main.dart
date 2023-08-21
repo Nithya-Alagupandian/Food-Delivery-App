@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:swiggy/screens/main_screen.dart';
 
 void main() {
@@ -11,6 +12,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(
+        const SystemUiOverlayStyle(statusBarColor: Colors.white
+            //color set to purple or set your own color
+            ));
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(

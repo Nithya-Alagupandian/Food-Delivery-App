@@ -19,7 +19,7 @@ List<Category> categories = [
 
 List<Category> categoryItems = [
   Category('assets/food.png', 'Burger'),
-  Category('assets/pizza.jpg', 'Pongal'),
+  Category('assets/pizza.jpg', 'Pizza'),
   Category('assets/thosa.jpg', 'Dosa'),
   Category('assets/idly.jpg', 'Idly'),
   Category('assets/poori.jpeg', 'Poori'),
@@ -33,6 +33,25 @@ List<Category> categoryItems = [
   Category('assets/food.png', 'Briyani'),
   Category('assets/food.png', 'Food'),
   Category('assets/food.png', 'Food'),
+];
+
+List<Category> instamartPopItems = [
+  Category('assets/cook.png', 'Cooking Esentials'),
+  Category('assets/egg.png', 'Eggs'),
+  Category('assets/milk.png', 'Milk'),
+  Category('assets/veg.png', 'vegetables'),
+  Category('assets/snack.png', 'Snacks & Chips'),
+  Category('assets/cold_drinks.png', 'Cold Drinks'),
+];
+
+List<Category> popularCuisList = [
+  Category('assets/idly.jpg', 'Idly'),
+  Category('assets/poori.jpeg', 'Poori'),
+  Category('assets/samosa.jpg', 'Samosa'),
+  Category('assets/roll.jpg', 'Rolls'),
+  Category('assets/food.png', 'Burger'),
+  Category('assets/pizza.jpg', 'Pizza'),
+  Category('assets/thosa.jpg', 'Dosa'),
 ];
 
 List<Category> foodItems = [
@@ -60,4 +79,21 @@ List<String> itemFilterList = [
   'Offers',
   'Rs. 300-RS. 600',
   'Less than Rs. 300',
+];
+
+List<String> recentSearchList = [
+  'Mr Burger',
+  'Kfc',
+];
+
+List<String> trendingSearchList = [
+  'North Indian',
+  'Kunafa House',
+  'Kunafa',
+  'FB cakes',
+  'LunchBox - Meals',
+  'Fries',
+  'Roll',
+  'Pizza',
+  'Pure Veg'
 ];

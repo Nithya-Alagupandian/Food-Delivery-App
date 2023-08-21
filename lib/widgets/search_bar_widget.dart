@@ -11,7 +11,7 @@ class SearchBarWidget extends StatelessWidget {
     return Container(
       height: 45,
       margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-      padding: const EdgeInsets.symmetric(horizontal: 5),
+      padding: const EdgeInsets.only(right: 10),
       // padding: const EdgeInsets.only(left: 20),
       decoration: BoxDecoration(
           color: Colors.black12, borderRadius: BorderRadius.circular(20)),
@@ -53,23 +53,68 @@ class SearchBarWidget extends StatelessWidget {
                   ],
                 ),
               ),
-              const Icon(Icons.search, color: primaryColor, size: 25),
+              const Icon(Icons.search, color: Colors.black87, size: 25),
               const SizedBox(
                 height: 25,
                 child: VerticalDivider(
-                  color: Colors.black26,
+                  color: Colors.black54,
                   thickness: 0.5,
                   indent: 5,
                   endIndent: 0,
                   width: 20,
                 ),
               ),
-              IconButton(
+              /* IconButton(
                 icon: const Icon(Icons.keyboard_voice_rounded,
                     color: primaryColor, size: 25),
                 onPressed: () {},
                 color: primaryColor,
-              )
+              ) */
+              GestureDetector(
+                  onTap: () {
+                    showModalBottomSheet(
+                        context: context,
+                        shape: const RoundedRectangleBorder(
+                          borderRadius: BorderRadius.vertical(
+                            top: Radius.circular(25.0),
+                          ),
+                        ),
+                        backgroundColor: Colors.white, // <-- SEE HERE
+                        builder: (context) {
+                          return SizedBox(
+                            height: 150,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              mainAxisSize: MainAxisSize.min,
+                              children: const <Widget>[
+                                Text(
+                                  "Hi, I'm Listening. Try Saying...",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.normal,
+                                      fontSize: 14.0,
+                                      color:
+                                          Color.fromARGB(255, 129, 127, 127)),
+                                ),
+                                Text(
+                                  '"Masala Dhosa"',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 14.0,
+                                      color: Colors.red),
+                                ),
+                                Image(
+                                  image: AssetImage('assets/sound.gif'),
+                                  width: 45,
+                                  height: 45,
+                                ),
+                              ],
+                            ),
+                          );
+                        });
+                  },
+                  child: const Icon(Icons.keyboard_voice_rounded,
+                      color: primaryColor)),
             ],
           ),
         ),

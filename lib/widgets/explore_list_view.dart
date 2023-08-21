@@ -15,6 +15,7 @@ class ExploreListView extends StatelessWidget {
         //height: 165,
         child: ListView.builder(
             shrinkWrap: true,
+            physics: NeverScrollableScrollPhysics(),
             scrollDirection: Axis.vertical,
             itemCount: itemList.length,
             itemBuilder: (context, index) {

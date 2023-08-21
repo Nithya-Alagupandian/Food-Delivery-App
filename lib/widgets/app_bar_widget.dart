@@ -20,32 +20,36 @@ class AppBarUI extends StatelessWidget {
               //print("Clicked");
             },
             child: Row(
-              children: [
-                const Icon(
-                  Icons.home,
-                  color: primaryColor,
-                  size: 25,
+              children: const [
+                Icon(
+                  Icons.work,
+                  color: Color.fromARGB(255, 230, 81, 0),
+                  size: 15,
                 ),
-                Text("Work",
-                    style: Theme.of(context)
-                        .textTheme
-                        .headline6!
-                        .copyWith(fontWeight: FontWeight.bold)),
-                const Icon(
+                SizedBox(width: 5),
+                Text(
+                  "Work",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14.0,
+                      color: Colors.black),
+                ),
+                Icon(
                   Icons.keyboard_arrow_down,
-                  color: primaryColor,
-                  size: 25,
+                  color: Colors.black54,
+                  size: 20,
                 )
               ],
             ),
           ),
-          Text(
-              "Mig 91, Ground Floor, Mogappair Eri Scheme, Mogappair East, chennai - 600037",
-              overflow: TextOverflow.ellipsis,
-              style: Theme.of(context)
-                  .textTheme
-                  .subtitle2!
-                  .copyWith(color: Colors.black45)),
+          const Text(
+            "Mig 91, Ground Floor, Mogappair Eri Scheme, Mogappair East, chennai - 600037",
+            overflow: TextOverflow.ellipsis,
+            style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 12.0,
+                color: Colors.black54),
+          ),
         ],
       ),
       actions: [userIcon()],
@@ -56,10 +60,10 @@ class AppBarUI extends StatelessWidget {
     return IconButton(
       icon: const Icon(
         Icons.account_circle,
-        size: 35,
+        size: 30,
       ),
       onPressed: () {},
-      color: primaryColor,
+      color: Colors.black87,
     );
   }
 }
